@@ -16,7 +16,7 @@ app.use((req, res, next) => {
     next()
 })
 const corsOpts = {
-    origin: '*',
+    origin: 'https://movie-booking-api.vercel.app/',
   
     methods: [
       'GET',
