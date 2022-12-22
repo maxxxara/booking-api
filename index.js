@@ -38,6 +38,13 @@ app.use((req, res, next) => {
 //     next();
 // });
 
+var corsOptions = {
+    origin: 'https://movie-booking-api.vercel.app/',
+    optionsSuccessStatus: 200 // For legacy browser support
+}
+
+app.use(cors(corsOptions));
+
 
 app.use("/movies/", moviesRoutes);
 app.use("/calendar/", calendarRoutes);
