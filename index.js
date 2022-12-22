@@ -39,7 +39,7 @@ app.use((req, res, next) => {
 // });
 
 var corsOptions = {
-    origin: 'https://movie-booking-api.vercel.app/',
+    origin: 'https://movie-booking-api.vercel.app/movies/newest',
     optionsSuccessStatus: 200 // For legacy browser support
 }
 
