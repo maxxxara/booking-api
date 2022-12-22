@@ -10,11 +10,8 @@ import cors from "cors";
 app.use(Express.json())
 
 //middlewares
-// access ccors
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Credentials", true)
-    next()
-})
+
+
 // const corsOpts = {
 //     origin: 'https://movie-booking-api.vercel.app/',
   
@@ -28,7 +25,7 @@ app.use((req, res, next) => {
 //     ],
 // };
   
-app.use(cors());
+// app.use(cors());
 
 // app.use(function(req, res, next) {
 //     res.setHeader('Access-Control-Allow-Origin', '*');
