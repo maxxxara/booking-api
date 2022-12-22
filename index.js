@@ -27,7 +27,7 @@ app.use("/calendar/", calendarRoutes);
 app.use("/seats/", seatsRoutes);
 app.use("/chat/", chatRoutes);
 
-
-app.listen(8800, () => {
+const PORT = process.env.PORT || 5050;
+app.listen(PORT, () => {
     console.log("API Working");
 })
