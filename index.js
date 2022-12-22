@@ -38,13 +38,13 @@ app.use((req, res, next) => {
 //     next();
 // });
 
-var corsOptions = {
-    origin: 'https://movie-booking-api.vercel.app/movies/newest',
-    optionsSuccessStatus: 200 // For legacy browser support
-}
-
-app.use(cors(corsOptions));
-
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'https://movie-booking-delta.vercel.app/');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
 
 app.use("/movies/", moviesRoutes);
 app.use("/calendar/", calendarRoutes);
