@@ -26,7 +26,7 @@ app.use(Express.json())
 // };
   
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://movie-booking-delta.vercel.app/")
+    res.header("Access-Control-Allow-Origin", "https://movie-booking-hd39gcfrz-maxxxara.vercel.app/")
     res.header(
       "Access-Control-Allow-Headers",
       "Origin, X-Requested, Content-Type, Accept Authorization"
