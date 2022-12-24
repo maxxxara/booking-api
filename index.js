@@ -12,7 +12,7 @@ app.use(Express.json())
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://stupendous-froyo-ab7bef.netlify.app/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://stupendous-froyo-ab7bef.netlify.app/');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -28,7 +28,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use(cors({credentials: true, origin: 'http://stupendous-froyo-ab7bef.netlify.app/'}));
+app.use(cors({credentials: true, origin: 'https://stupendous-froyo-ab7bef.netlify.app/'}));
 
 
 
