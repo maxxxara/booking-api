@@ -10,11 +10,15 @@ import cors from "cors";
 app.use(Express.json())
 
 //middlewares
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Credentials", true)
-    next()
-})
-app.use(cors({credentials: true, origin: ['http://localhost:3000', 'http://movie-booking-delta.vercel.app/']}));
+router.get('/', function(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', 'https://movie-booking-delta.vercel.app/');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
+    res.setHeader('Access-Control-Allow-Credentials', true); // If needed
+
+    res.send('cors problem fixed:)');
+});
+app.use(cors({credentials: true, origin: ['http://localhost:3000', 'https://movie-booking-delta.vercel.app/']}));
 
 
 
