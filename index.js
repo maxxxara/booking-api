@@ -10,7 +10,7 @@ import cors from "cors";
 app.use(Express.json())
 
 
-app.use(cors({credentials: true, origin: ['http://localhost:3000', 'https://movie-booking-delta.vercel.app/']}));
+app.use(cors({credentials: true, origin: 'https://stupendous-froyo-ab7bef.netlify.app/'}));
 
 
 
