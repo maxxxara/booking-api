@@ -10,22 +10,13 @@ import cors from "cors";
 app.use(Express.json())
 
 //middlewares
-
-
-// const corsOpts = {
-//     origin: 'https://movie-booking-api.vercel.app/',
-  
-//     methods: [
-//       'GET',
-//       'POST',
-//     ],
-  
-//     allowedHeaders: [
-//       'Content-Type',
-//     ],
-// };
-  
-// app.use(cors())
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Credentials", true)
+    next()
+})
+app.use(cors({
+    origin: "http://localhost:3000"
+}))
 
 
 app.use("/movies/", moviesRoutes);
