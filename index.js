@@ -7,7 +7,7 @@ import chatRoutes from "./routes/chat.js";
 import cors from "cors";
 
 
-app.use(Express.json())
+// app.use(Express.json())
 // Add headers before the routes are defined
 app.use(function (req, res, next) {
 
