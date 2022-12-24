@@ -28,7 +28,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use(cors({credentials: true, origin: 'https://stupendous-froyo-ab7bef.netlify.app/'}));
+app.use(cors({credentials: true, origin: 'http://stupendous-froyo-ab7bef.netlify.app/'}));
 
 
 
