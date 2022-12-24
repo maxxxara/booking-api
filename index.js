@@ -14,7 +14,7 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Credentials", true)
     next()
 })
-app.use(cors({credentials: true, origin: ['http://localhost:3000', 'https://movie-booking-delta.vercel.app/']}));
+app.use(cors({credentials: true, origin: ['http://localhost:3000', 'http://movie-booking-delta.vercel.app/']}));
 
 
 
