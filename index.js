@@ -7,12 +7,12 @@ import chatRoutes from "./routes/chat.js";
 import cors from "cors";
 
 
-// app.use(Express.json())
+app.use(Express.json())
 // Add headers before the routes are defined
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://stupendous-froyo-ab7bef.netlify.app/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://movie-booking-delta.vercel.app/');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -28,7 +28,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use(cors({credentials: true, origin: 'https://stupendous-froyo-ab7bef.netlify.app/'}));
+app.use(cors({credentials: true, origin: 'https://movie-booking-delta.vercel.app/'}));
 
 
 
